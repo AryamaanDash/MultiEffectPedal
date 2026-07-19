@@ -1,327 +1,4966 @@
-(kicad_sch (version 20230121) (generator "ChatGPT_Daisy_Seed_Pedal_Template")
-  (uuid "3205d63a-e4c8-497b-8331-e18f49137103")
-  (paper "A4")
-
-  (lib_symbols
-    (symbol "Custom:Two_Pin" (pin_numbers hide) (pin_names (offset 0.508)) (exclude_from_sim no) (in_bom yes) (on_board yes)
-      (property "Reference" "X" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
-      (property "Value" "Two_Pin" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
-      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "Two_Pin_0_1"
-        (rectangle (start -2.54 1.27) (end 2.54 -1.27) (stroke (width 0.1524) (type default)) (fill (type none)))
-        (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
-        (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
-      )
-    )
-    (symbol "Custom:Three_Pin_Pot" (pin_names (offset 0.508)) (exclude_from_sim no) (in_bom yes) (on_board yes)
-      (property "Reference" "RV" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
-      (property "Value" "B10K" (at 0 -5.08 0) (effects (font (size 1.27 1.27))))
-      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "Three_Pin_Pot_0_1"
-        (rectangle (start -3.81 2.54) (end 3.81 -2.54) (stroke (width 0.1524) (type default)) (fill (type none)))
-        (pin passive line (at -6.35 2.54 0) (length 2.54) (name "GND" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
-        (pin passive line (at -6.35 0 0) (length 2.54) (name "WIPER" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
-        (pin passive line (at -6.35 -2.54 0) (length 2.54) (name "3V3" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
-      )
-    )
-    (symbol "Custom:MCP6002_Dual" (pin_names (offset 0.508)) (exclude_from_sim no) (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at 0 8.89 0) (effects (font (size 1.27 1.27))))
-      (property "Value" "MCP6002" (at 0 -8.89 0) (effects (font (size 1.27 1.27))))
-      (property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "MCP6002_Dual_0_1"
-        (rectangle (start -6.35 7.62) (end 6.35 -7.62) (stroke (width 0.1524) (type default)) (fill (type none)))
-        (pin output line (at -8.89 5.08 0) (length 2.54) (name "OUT_A" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
-        (pin input line (at -8.89 2.54 0) (length 2.54) (name "IN-_A" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
-        (pin input line (at -8.89 0 0) (length 2.54) (name "IN+_A" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))
-        (pin power_in line (at 0 -10.16 90) (length 2.54) (name "VSS" (effects (font (size 1.27 1.27)))) (number "4" (effects (font (size 1.27 1.27)))))
-        (pin input line (at 8.89 0 180) (length 2.54) (name "IN+_B" (effects (font (size 1.27 1.27)))) (number "5" (effects (font (size 1.27 1.27)))))
-        (pin input line (at 8.89 2.54 180) (length 2.54) (name "IN-_B" (effects (font (size 1.27 1.27)))) (number "6" (effects (font (size 1.27 1.27)))))
-        (pin output line (at 8.89 5.08 180) (length 2.54) (name "OUT_B" (effects (font (size 1.27 1.27)))) (number "7" (effects (font (size 1.27 1.27)))))
-        (pin power_in line (at 0 10.16 270) (length 2.54) (name "VDD" (effects (font (size 1.27 1.27)))) (number "8" (effects (font (size 1.27 1.27)))))
-      )
-    )
-    (symbol "Custom:Daisy_Seed_Minimal" (pin_names (offset 0.508)) (exclude_from_sim no) (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at 0 13.97 0) (effects (font (size 1.27 1.27))))
-      (property "Value" "Daisy Seed" (at 0 -13.97 0) (effects (font (size 1.27 1.27))))
-      (property "Footprint" "Custom:Daisy_Seed_2x20_Socket" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (property "Datasheet" "https://daisy.audio" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "Daisy_Seed_Minimal_0_1"
-        (rectangle (start -12.7 12.7) (end 12.7 -12.7) (stroke (width 0.1524) (type default)) (fill (type none)))
-        (pin input line (at -15.24 7.62 0) (length 2.54) (name "D9" (effects (font (size 1.27 1.27)))) (number "10" (effects (font (size 1.27 1.27)))))
-        (pin input line (at -15.24 2.54 0) (length 2.54) (name "AUDIO_IN_L" (effects (font (size 1.27 1.27)))) (number "16" (effects (font (size 1.27 1.27)))))
-        (pin output line (at 15.24 2.54 180) (length 2.54) (name "AUDIO_OUT_L" (effects (font (size 1.27 1.27)))) (number "18" (effects (font (size 1.27 1.27)))))
-        (pin output line (at 15.24 0 180) (length 2.54) (name "AUDIO_OUT_R" (effects (font (size 1.27 1.27)))) (number "19" (effects (font (size 1.27 1.27)))))
-        (pin power_in line (at -2.54 -15.24 90) (length 2.54) (name "AGND" (effects (font (size 1.27 1.27)))) (number "20" (effects (font (size 1.27 1.27)))))
-        (pin power_out line (at 0 15.24 270) (length 2.54) (name "+3V3A" (effects (font (size 1.27 1.27)))) (number "21" (effects (font (size 1.27 1.27)))))
-        (pin power_in line (at 2.54 -15.24 90) (length 2.54) (name "DGND" (effects (font (size 1.27 1.27)))) (number "40" (effects (font (size 1.27 1.27)))))
-      )
-    )
-  )
-
-  (text "Daisy Seed Multi-Effect Guitar Pedal - starter schematic" (at 25.00 12.00 0) (effects (font (size 1.8 1.8) (thickness 0.15))) (uuid "53472bd0-9f3c-4a97-b329-7dd4d6bd4b5b"))
-  (text "This file is a reviewable KiCad starter, not a production-ready design. Run ERC/DRC and verify footprints/pinouts." (at 25.00 18.00 0) (effects (font (size 1.1 1.1) (thickness 0.15))) (uuid "d7f33d71-aed4-464c-b448-f5524c863cbc"))
-  (text "Core nets: guitar input buffer -> AUDIO_IN_L; AUDIO_OUT_L -> output buffer; D9 -> momentary switch to GND." (at 25.00 23.00 0) (effects (font (size 1.1 1.1) (thickness 0.15))) (uuid "82fcc82b-73c1-44ca-af3d-9562b952f897"))
-
-  (symbol (lib_id "Custom:Two_Pin") (at 25.00 45.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "2102dacf-d329-4b63-ac45-20bea5b108f4")
-
-    (property "Reference" "J1" (at 25.00 42.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "Input TS jack: tip/sleeve" (at 25.00 48.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Jack_or_Switch_2Pin" (at 25.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 25.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "IN_JACK_TIP" (shape input) (at 15.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8c24dc32-c44c-421e-945a-21fc2a4ff784"))
-  (global_label "GND" (shape passive) (at 35.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6bcf8bde-dde7-4063-9a91-aca67ac82202"))
-  (symbol (lib_id "Custom:Two_Pin") (at 55.00 45.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "b1c0b533-71f1-4768-8ec5-dc93b1c3589a")
-
-    (property "Reference" "C4" (at 55.00 42.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "1uF input coupling" (at 55.00 48.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 55.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 55.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "IN_JACK_TIP" (shape input) (at 45.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1cfce3f4-e035-43be-8ab9-3eca25c1d41b"))
-  (global_label "INPUT_NODE" (shape input) (at 65.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d1423f30-da6f-464e-b739-4f4316e7ca22"))
-  (symbol (lib_id "Custom:Two_Pin") (at 55.00 55.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "a9dce5f3-6596-41c8-a6d7-1b1dd9215d90")
-
-    (property "Reference" "R3" (at 55.00 52.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "1M to VREF" (at 55.00 58.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 55.00 55.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 55.00 55.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "INPUT_NODE" (shape input) (at 45.00 55.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0439cef4-296e-48f6-8a4c-8aab7d34628a"))
-  (global_label "VREF_1V65" (shape input) (at 65.00 55.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "19b1fbe8-dbf5-446f-b400-f956586d81ee"))
-
-  (symbol (lib_id "Custom:MCP6002_Dual") (at 100.00 50.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "00e5dd9a-e595-43ea-b582-d10dfc363aca")
-
-    (property "Reference" "U1" (at 100.00 47.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "MCP6002 dual op-amp" (at 100.00 53.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Package_DIP:DIP-8_W7.62mm" (at 100.00 50.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 100.00 50.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "INPUT_NODE" (shape input) (at 83.00 50.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "81b2c1cb-a0ca-4492-bac2-eb07a24d9ed0"))
-  (global_label "BUF_IN_OUT" (shape input) (at 83.00 47.50 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9c21ce5c-750b-496c-a2c6-d40df569282c"))
-  (global_label "BUF_IN_OUT" (shape input) (at 83.00 44.90 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "704736d9-0978-4356-8675-eb0a48d4a7e0"))
-  (global_label "OUT_BUF_INPUT" (shape input) (at 118.00 50.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4a892f72-ad20-4910-aefd-b8a93798cc44"))
-  (global_label "OUT_BUF_OUT" (shape input) (at 118.00 47.50 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6b3d74f9-e5fe-4795-8f73-238610e35e0c"))
-  (global_label "OUT_BUF_OUT" (shape input) (at 118.00 44.90 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "b78898e7-d5de-424b-97d3-90bfa11d754b"))
-  (global_label "+3V3A" (shape passive) (at 100.00 35.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c94a901b-a584-4210-9514-16c578df114a"))
-  (global_label "GND" (shape passive) (at 100.00 65.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "e65099a6-c795-4a0e-a239-b6f8cd799cf3"))
-
-  (symbol (lib_id "Custom:Two_Pin") (at 135.00 45.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "2e4c4021-0da7-4e80-82a9-c51ccc8da72c")
-
-    (property "Reference" "R4" (at 135.00 42.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100R" (at 135.00 48.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 135.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 135.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "BUF_IN_OUT" (shape input) (at 125.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fb216691-c679-4200-a3bb-cc2740a98477"))
-  (global_label "BUF_TO_DAISY_C" (shape input) (at 145.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c19469e9-4f13-4694-adbe-e643a8d42ff0"))
-  (symbol (lib_id "Custom:Two_Pin") (at 165.00 45.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "8f999bac-7592-493b-8598-35bab3a4e42f")
-
-    (property "Reference" "C5" (at 165.00 42.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "1uF into Daisy" (at 165.00 48.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 165.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 165.00 45.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "BUF_TO_DAISY_C" (shape input) (at 155.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a453739d-24d2-4b4d-af0d-8c68139bd137"))
-  (global_label "AUDIO_IN_L" (shape input) (at 175.00 45.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1cafd09e-18e1-4688-951b-fcff7c23e4ab"))
-
-  (symbol (lib_id "Custom:Daisy_Seed_Minimal") (at 210.00 55.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "b49c365c-1327-467f-9ecc-e52714496657")
-
-    (property "Reference" "U2" (at 210.00 52.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "Daisy Seed minimal pinout" (at 210.00 58.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Daisy_Seed_2x20_Socket" (at 210.00 55.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 210.00 55.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "D9_SWITCH" (shape input) (at 192.00 47.40 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "0bd47e21-221d-4d34-9157-9508bfe5c7d6"))
-  (global_label "AUDIO_IN_L" (shape input) (at 192.00 52.40 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2434dcb2-f59e-4361-bb2f-d4c6bfcbca90"))
-  (global_label "AUDIO_OUT_L" (shape input) (at 228.00 52.40 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ed0fe534-ebb4-4ff2-a82b-4f7caba5336a"))
-  (global_label "AUDIO_OUT_R_UNUSED" (shape input) (at 228.00 55.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a72988ef-09d2-47ce-b1f4-88229a66b664"))
-  (global_label "+3V3A" (shape passive) (at 210.00 37.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "48161e59-b586-405f-bac6-e77c871b6917"))
-  (global_label "GND" (shape passive) (at 207.00 72.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "aba9d1ba-3c13-4db3-add5-337028cbcd1f"))
-  (global_label "GND" (shape passive) (at 213.00 72.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "6c8125ac-467b-4226-b624-ee5a11e12d9f"))
-
-  (symbol (lib_id "Custom:Two_Pin") (at 175.00 25.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "b8cb283e-93ea-4f6b-a8a2-b96d063734da")
-
-    (property "Reference" "SW1" (at 175.00 22.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "Momentary mode switch" (at 175.00 28.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Jack_or_Switch_2Pin" (at 175.00 25.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 175.00 25.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "D9_SWITCH" (shape input) (at 165.00 25.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "a25943c7-8a48-4942-9664-0a51eb87a540"))
-  (global_label "GND" (shape passive) (at 185.00 25.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "71a77dbc-ffc4-4d29-80cf-e1d2719a109a"))
-
-  (symbol (lib_id "Custom:Two_Pin") (at 165.00 75.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "59870755-d0bc-4594-a653-f4070eb8f5aa")
-
-    (property "Reference" "C6" (at 165.00 72.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "1uF from Daisy Out" (at 165.00 78.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 165.00 75.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 165.00 75.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "AUDIO_OUT_L" (shape input) (at 155.00 75.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "bd005cb7-e223-43b4-ab44-069fcec446ba"))
-  (global_label "OUT_BUF_INPUT" (shape input) (at 175.00 75.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "20adec3b-2eab-4469-9486-41ad5661b479"))
-  (symbol (lib_id "Custom:Two_Pin") (at 165.00 85.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "06ccc52d-214e-4ef3-9b88-050122fdbb91")
-
-    (property "Reference" "R5" (at 165.00 82.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100k output bias" (at 165.00 88.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 165.00 85.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 165.00 85.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "OUT_BUF_INPUT" (shape input) (at 155.00 85.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "353cd574-9e53-4a21-8752-910b959edf24"))
-  (global_label "VREF_1V65" (shape input) (at 175.00 85.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4e2b1821-c7e3-4610-b7e6-bb96e4273def"))
-  (symbol (lib_id "Custom:Two_Pin") (at 135.00 95.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "d51ad2fd-ff43-4341-9686-aa01d9b0a162")
-
-    (property "Reference" "R6" (at 135.00 92.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100R output iso" (at 135.00 98.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 135.00 95.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 135.00 95.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "OUT_BUF_OUT" (shape input) (at 125.00 95.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "df8d2581-478d-4e1b-a8cb-540aff1ecd6d"))
-  (global_label "OUT_CAP_IN" (shape input) (at 145.00 95.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ac09edff-f9ce-4d49-a252-e94415f041e2"))
-  (symbol (lib_id "Custom:Two_Pin") (at 165.00 95.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "00048ec0-d9ae-48a2-88f5-4b54bdc233b2")
-
-    (property "Reference" "C7" (at 165.00 92.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "10uF final output coupling" (at 165.00 98.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 165.00 95.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 165.00 95.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "OUT_CAP_IN" (shape input) (at 155.00 95.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "14641e15-2c8c-431e-819a-e69a46726087"))
-  (global_label "OUT_JACK_TIP" (shape input) (at 175.00 95.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "78c38e18-2f72-4e8f-a33f-8694e6253bb3"))
-  (symbol (lib_id "Custom:Two_Pin") (at 165.00 105.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "a383c363-9395-405f-aa8e-2d7c8d84c3fd")
-
-    (property "Reference" "R7" (at 165.00 102.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100k pulldown" (at 165.00 108.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 165.00 105.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 165.00 105.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "OUT_JACK_TIP" (shape input) (at 155.00 105.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "191eaa5e-4747-4c39-8a32-a46a84c2db51"))
-  (global_label "GND" (shape passive) (at 175.00 105.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "09d3c4dc-848d-4379-940f-80321a2f95df"))
-  (symbol (lib_id "Custom:Two_Pin") (at 205.00 95.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "9d581e4e-8dd3-4b63-bb2b-60f43599c6f9")
-
-    (property "Reference" "J2" (at 205.00 92.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "Output TS jack: tip/sleeve" (at 205.00 98.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Jack_or_Switch_2Pin" (at 205.00 95.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 205.00 95.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "OUT_JACK_TIP" (shape input) (at 195.00 95.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ffbf8c0d-a84e-4d3a-9b49-25ab36722193"))
-  (global_label "GND" (shape passive) (at 215.00 95.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "69a768e4-72e2-43c0-af43-c36ca19a5b2b"))
-
-  (symbol (lib_id "Custom:Two_Pin") (at 45.00 80.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "d9b58bb8-78b2-4e5a-a19e-5c80d4986315")
-
-    (property "Reference" "R1" (at 45.00 77.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100k VREF top" (at 45.00 83.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 45.00 80.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 45.00 80.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "+3V3A" (shape passive) (at 35.00 80.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1a928ca8-d876-4143-b2a4-b4fdfa119857"))
-  (global_label "VREF_1V65" (shape input) (at 55.00 80.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "4f3aa489-c019-464e-90d9-7c4ff47eeec9"))
-  (symbol (lib_id "Custom:Two_Pin") (at 45.00 90.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "d8e01cc6-b395-480a-afde-7a98136b7f41")
-
-    (property "Reference" "R2" (at 45.00 87.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100k VREF bottom" (at 45.00 93.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 45.00 90.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 45.00 90.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "VREF_1V65" (shape input) (at 35.00 90.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "7ce8c8f2-137b-4eee-b405-fd76ff330689"))
-  (global_label "GND" (shape passive) (at 55.00 90.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "1b266b12-6cb5-443e-b97c-e5b8e48e4e7d"))
-  (symbol (lib_id "Custom:Two_Pin") (at 75.00 80.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "23218daf-4072-41bf-b8df-35ac429d8274")
-
-    (property "Reference" "C1" (at 75.00 77.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "10uF VREF bulk" (at 75.00 83.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 75.00 80.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 75.00 80.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "VREF_1V65" (shape input) (at 65.00 80.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d5bd4460-d5c6-4303-bfd6-def5832c8849"))
-  (global_label "GND" (shape passive) (at 85.00 80.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "33fb8ed3-f88f-433d-8a0f-aebb9dd5c46a"))
-  (symbol (lib_id "Custom:Two_Pin") (at 75.00 90.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "61173081-3646-4f8b-95d8-c268fa532d53")
-
-    (property "Reference" "C2" (at 75.00 87.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100nF VREF bypass" (at 75.00 93.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 75.00 90.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 75.00 90.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "VREF_1V65" (shape input) (at 65.00 90.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ec69cd96-669c-4de0-890e-98770e8442b3"))
-  (global_label "GND" (shape passive) (at 85.00 90.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "57e85fc0-5f47-499a-8ddf-1cdb5f7084db"))
-  (symbol (lib_id "Custom:Two_Pin") (at 75.00 100.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "15d2d106-0680-45b9-9d1e-533af6c682fe")
-
-    (property "Reference" "C3" (at 75.00 97.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "100nF op-amp decouple" (at 75.00 103.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:TH_2Pin_7p62" (at 75.00 100.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 75.00 100.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "+3V3A" (shape passive) (at 65.00 100.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "df0db3af-c0e1-41f4-b7ee-f14132917a09"))
-  (global_label "GND" (shape passive) (at 85.00 100.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "231856f8-4ea3-4613-8b49-5007bdd83d8b"))
-
-  (symbol (lib_id "Custom:Three_Pin_Pot") (at 35.00 125.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "fc8ff730-8bd1-41bb-a350-a2ab36686801")
-
-    (property "Reference" "RV1" (at 35.00 122.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "B10K wet/dry" (at 35.00 128.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Pot_3Pin_B10K_Wired" (at 35.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 35.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "POT1_A0_D15" (shape input) (at 25.00 125.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "af36fca7-19c2-477d-a729-3da72eca8a25"))
-  (symbol (lib_id "Custom:Three_Pin_Pot") (at 75.00 125.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "ff5d4d64-d240-4c42-a278-68959e1806e4")
-
-    (property "Reference" "RV2" (at 75.00 122.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "B10K amount" (at 75.00 128.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Pot_3Pin_B10K_Wired" (at 75.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 75.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "POT2_A1_D16" (shape input) (at 65.00 125.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "3562857a-6c49-4fd6-a1f2-01c97845352a"))
-  (symbol (lib_id "Custom:Three_Pin_Pot") (at 115.00 125.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "c2991d33-4f21-4a3b-b762-dfe37a3b7823")
-
-    (property "Reference" "RV3" (at 115.00 122.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "B10K time/rate" (at 115.00 128.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Pot_3Pin_B10K_Wired" (at 115.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 115.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "POT3_A2_D17" (shape input) (at 105.00 125.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "062b8ca4-b979-499f-873d-abd2054528a7"))
-  (symbol (lib_id "Custom:Three_Pin_Pot") (at 155.00 125.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "d6069c68-bac8-479a-a60f-5897c5d60c8d")
-
-    (property "Reference" "RV4" (at 155.00 122.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "B10K feedback" (at 155.00 128.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Pot_3Pin_B10K_Wired" (at 155.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 155.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "POT4_A3_D18" (shape input) (at 145.00 125.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "afc850f1-1608-442e-a7fd-7c778e943ad6"))
-  (symbol (lib_id "Custom:Three_Pin_Pot") (at 195.00 125.00 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (uuid "d8860418-16f7-4791-b6e6-59766e121f1f")
-
-    (property "Reference" "RV5" (at 195.00 122.00 0) (effects (font (size 1.27 1.27))))
-    (property "Value" "B10K output level" (at 195.00 128.00 0) (effects (font (size 1.27 1.27))))
-    (property "Footprint" "Custom:Pot_3Pin_B10K_Wired" (at 195.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-    (property "Datasheet" "" (at 195.00 125.00 0) (effects (font (size 1.27 1.27)) hide))
-  )
-  (global_label "POT5_A4_D19" (shape input) (at 185.00 125.00 0) (fields_autoplaced) (effects (font (size 1.27 1.27)) (justify left)) (uuid "d4c58810-555a-4680-b96f-d9807119f959"))
-  (text "Pot pins: 1=GND, 2=wiper to ADC, 3=+3V3A. Your current C++ does not read these yet." (at 25.00 137.00 0) (effects (font (size 1.1 1.1) (thickness 0.15))) (uuid "b4a2cc16-2ef0-4180-a434-298f27589f81"))
-
-  (sheet_instances
-    (path "/" (page "1"))
-  )
-  (symbol_instances)
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "3205d63a-e4c8-497b-8331-e18f49137103")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Custom:Daisy_Seed_Minimal"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Daisy Seed"
+				(at 0 -13.97 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Custom:Daisy_Seed_2x20_Socket"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://daisy.audio"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Daisy_Seed_Minimal_0_1"
+				(rectangle
+					(start -12.7 12.7)
+					(end 12.7 -12.7)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin input line
+					(at -15.24 -7.62 0)
+					(length 2.54)
+					(name "D9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -15.24 -2.54 0)
+					(length 2.54)
+					(name "AUDIO_IN_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 -2.54 180)
+					(length 2.54)
+					(name "AUDIO_OUT_L"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 15.24 0 180)
+					(length 2.54)
+					(name "AUDIO_OUT_R"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 5.08 180)
+					(length 2.54)
+					(name "A0_D15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "22"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 7.62 180)
+					(length 2.54)
+					(name "A1_D16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "23"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 10.16 180)
+					(length 2.54)
+					(name "A2_D17"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "24"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 15.24 12.7 180)
+					(length 2.54)
+					(name "A3_D18"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "25"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 15.24 270)
+					(length 2.54)
+					(name "AGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 0 -15.24 90)
+					(length 2.54)
+					(name "+3V3A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "21"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 15.24 270)
+					(length 2.54)
+					(name "DGND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "40"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Custom:MCP6002_Dual"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at 0 8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "MCP6002"
+				(at 0 -8.89 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MCP6002_Dual_0_1"
+				(rectangle
+					(start -6.35 7.62)
+					(end 6.35 -7.62)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin output line
+					(at -8.89 -5.08 0)
+					(length 2.54)
+					(name "OUT_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 -2.54 0)
+					(length 2.54)
+					(name "IN-_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -8.89 0 0)
+					(length 2.54)
+					(name "IN+_A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 10.16 270)
+					(length 2.54)
+					(name "VSS"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 8.89 0 180)
+					(length 2.54)
+					(name "IN+_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 8.89 -2.54 180)
+					(length 2.54)
+					(name "IN-_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 8.89 -5.08 180)
+					(length 2.54)
+					(name "OUT_B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -10.16 90)
+					(length 2.54)
+					(name "VDD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Custom:Three_Pin_Pot"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "RV"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "B10K"
+				(at 0 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Three_Pin_Pot_0_1"
+				(rectangle
+					(start -3.81 2.54)
+					(end 3.81 -2.54)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -6.35 2.54 0)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -6.35 0 0)
+					(length 2.54)
+					(name "WIPER"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -6.35 -2.54 0)
+					(length 2.54)
+					(name "3V3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Custom:Two_Pin"
+			(pin_numbers
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "X"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Two_Pin"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Two_Pin_0_1"
+				(rectangle
+					(start -2.54 1.27)
+					(end 2.54 -1.27)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Daisy Seed Multi-Effect Guitar Pedal - starter schematic"
+		(exclude_from_sim no)
+		(at 63.5 16.51 0)
+		(effects
+			(font
+				(size 1.8 1.8)
+				(thickness 0.15)
+			)
+		)
+		(uuid "53472bd0-9f3c-4a97-b329-7dd4d6bd4b5b")
+	)
+	(text "Core nets: guitar input buffer -> AUDIO_IN_L; AUDIO_OUT_L -> output buffer; D9 -> momentary switch to GND."
+		(exclude_from_sim no)
+		(at 63.5 27.51 0)
+		(effects
+			(font
+				(size 1.1 1.1)
+				(thickness 0.15)
+			)
+		)
+		(uuid "82fcc82b-73c1-44ca-af3d-9562b952f897")
+	)
+	(text "RV5 is output volume: 1=GND, 2=wiper to output jack, 3=post-output-cap. RV1-RV4 are optional future ADC controls."
+		(exclude_from_sim no)
+		(at 72.39 169.926 0)
+		(effects
+			(font
+				(size 1.1 1.1)
+				(thickness 0.15)
+			)
+		)
+		(uuid "b4a2cc16-2ef0-4180-a434-298f27589f81")
+	)
+	(text "This file is a reviewable KiCad starter, not a production-ready design. Run ERC/DRC and verify footprints/pinouts."
+		(exclude_from_sim no)
+		(at 63.5 22.51 0)
+		(effects
+			(font
+				(size 1.1 1.1)
+				(thickness 0.15)
+			)
+		)
+		(uuid "d7f33d71-aed4-464c-b448-f5524c863cbc")
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 25 122.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "93190b7c-e916-4cf0-ad49-4deb43636e6e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 25 122.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 25 127.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "70e9ebbb-ecd8-455d-9d02-9b2c1b58ab95")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 25 127.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 65 122.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "87dd241d-1305-4d94-aa8f-33b95084f275")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 122.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 65 127.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "10172923-e8de-4aad-b49e-bc48291aeeaa")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 127.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 105 122.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2075d74e-9114-4a2a-b881-9b44b4a94c58")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 105 122.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 105 127.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a377a233-34c1-40c7-8e4e-8e3e5501accb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 105 127.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 145 122.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fdbf398c-a51f-47cb-ab8f-f34217e9379a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 145 122.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 145 127.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3c810dc3-3815-4e21-9bf7-8db6cfaa5745")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 145 127.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_LEVEL_IN"
+		(shape input)
+		(at 185 122.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c13111e4-dcf8-4b9c-b53c-1ad61c69e0c4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 185 122.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 185 127.54 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "29845ef6-a8ad-4de2-b866-c053bedbc180")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 185 127.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT1_A0_D15"
+		(shape input)
+		(at 228 60.08 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "67e12356-0ab7-4cfa-95e8-46fc4ed9b39b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228 60.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT2_A1_D16"
+		(shape input)
+		(at 228 62.62 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "72ccdd37-850d-4e3e-b043-7c5ebca193c6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228 62.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT3_A2_D17"
+		(shape input)
+		(at 228 65.16 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c6067f5b-b66e-42e6-ac62-5ac8a99033b8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228 65.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT4_A3_D18"
+		(shape input)
+		(at 228 67.7 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "89df0692-ad9e-4ad1-8911-f7b2840ab35e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228 67.7 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 15 45) (xy 19.92 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cf5dc63-f5d6-46ef-bfd3-e4ef88080a7d")
+	)
+	(wire
+		(pts
+			(xy 30.08 45) (xy 35 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66aef686-9f1a-4ac5-8b98-0c36a84b46ac")
+	)
+	(wire
+		(pts
+			(xy 45 45) (xy 49.92 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f085f17-22be-41fc-b9f5-04c4b60f7559")
+	)
+	(wire
+		(pts
+			(xy 60.08 45) (xy 65 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4dc2541-735b-4251-b3aa-6a816c289c41")
+	)
+	(wire
+		(pts
+			(xy 45 55) (xy 49.92 55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33bf1bbf-a6c5-47bf-aef2-615fb75bce65")
+	)
+	(wire
+		(pts
+			(xy 60.08 55) (xy 65 55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7737a4ba-15cd-4060-86a8-0af7e99a14a9")
+	)
+	(wire
+		(pts
+			(xy 125 45) (xy 129.92 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69eed390-f222-4756-a391-e7db8c78d5fb")
+	)
+	(wire
+		(pts
+			(xy 140.08 45) (xy 145 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51f7dabf-26dd-486d-a582-4fb95e7ad82b")
+	)
+	(wire
+		(pts
+			(xy 155 45) (xy 159.92 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6fff2ed4-28e4-47e8-a256-187891b51511")
+	)
+	(wire
+		(pts
+			(xy 170.08 45) (xy 175 45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab458d13-8e2c-45a9-9917-449a05ac7f96")
+	)
+	(wire
+		(pts
+			(xy 155 75) (xy 159.92 75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0cfafe8-5a44-4667-ad45-b6227c43b026")
+	)
+	(wire
+		(pts
+			(xy 170.08 75) (xy 175 75)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c14800f6-e592-4ff6-9311-788ce809c876")
+	)
+	(wire
+		(pts
+			(xy 155 85) (xy 159.92 85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45e83126-aa89-4296-923a-96b57f3b164b")
+	)
+	(wire
+		(pts
+			(xy 170.08 85) (xy 175 85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59392549-66a0-4103-900d-fcc0f3d58a1c")
+	)
+	(wire
+		(pts
+			(xy 125 95) (xy 129.92 95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33ff876b-2efb-49b6-998f-1b4e4042833f")
+	)
+	(wire
+		(pts
+			(xy 140.08 95) (xy 145 95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5b2f9eda-799b-484e-b677-9b350f662b9f")
+	)
+	(wire
+		(pts
+			(xy 155 95) (xy 159.92 95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30b16b87-dce6-4212-9092-e849acc7bb87")
+	)
+	(wire
+		(pts
+			(xy 170.08 95) (xy 175 95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e71d811-2485-48f8-b7af-634e107b5854")
+	)
+	(wire
+		(pts
+			(xy 195 95) (xy 199.92 95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89b2e2a8-838a-4a63-a830-0c973b621d0e")
+	)
+	(wire
+		(pts
+			(xy 210.08 95) (xy 215 95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0ed43af-71b8-414f-9e28-02c595adba6d")
+	)
+	(wire
+		(pts
+			(xy 155 105) (xy 159.92 105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c7638b71-8724-4b04-90c9-cdd857c5d9ae")
+	)
+	(wire
+		(pts
+			(xy 170.08 105) (xy 175 105)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7770f89-f813-4763-bb7b-eab53b7a72dc")
+	)
+	(wire
+		(pts
+			(xy 35 80) (xy 39.92 80)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6c00e4f-70a5-464f-91b4-84ab55e37945")
+	)
+	(wire
+		(pts
+			(xy 50.08 80) (xy 55 80)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ae275c8-d0d0-4da2-8102-467f022afa52")
+	)
+	(wire
+		(pts
+			(xy 35 90) (xy 39.92 90)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a16121ff-e760-48f2-9854-9f77b0da0952")
+	)
+	(wire
+		(pts
+			(xy 50.08 90) (xy 55 90)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4966c5a9-d9cd-4500-94cd-0a11fd903b75")
+	)
+	(wire
+		(pts
+			(xy 65 80) (xy 69.92 80)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43710518-76b9-45b1-91c6-d1f162593a82")
+	)
+	(wire
+		(pts
+			(xy 80.08 80) (xy 85 80)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea6f9657-9051-495c-9e5b-7143f8e598d2")
+	)
+	(wire
+		(pts
+			(xy 65 90) (xy 69.92 90)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cca8f064-8065-4f3c-baa8-f9b3be1abb4d")
+	)
+	(wire
+		(pts
+			(xy 80.08 90) (xy 85 90)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a35185f-f5cf-4a0f-a633-abd8d1474454")
+	)
+	(wire
+		(pts
+			(xy 65 100) (xy 69.92 100)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9fc1b27e-2206-4abb-ad0b-377c65eec947")
+	)
+	(wire
+		(pts
+			(xy 80.08 100) (xy 85 100)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2cda0d0a-be6b-4914-a1d3-df8f5afd6789")
+	)
+	(wire
+		(pts
+			(xy 165 25) (xy 169.92 25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf6b598b-dce5-4351-b8b3-01ea06f32b56")
+	)
+	(wire
+		(pts
+			(xy 180.08 25) (xy 185 25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "466b6c16-24d9-449d-b02f-f51f2e6f6bd0")
+	)
+	(wire
+		(pts
+			(xy 83 44.9) (xy 91.11 44.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4ff549a1-239b-4f0a-8c14-6c507808918a")
+	)
+	(wire
+		(pts
+			(xy 83 47.5) (xy 91.11 47.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a5f0f7f-ccd2-49f7-8765-1b4e89c12523")
+	)
+	(wire
+		(pts
+			(xy 83 50) (xy 91.11 50)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8837ff06-0145-4289-a03d-7880e3e13b5d")
+	)
+	(wire
+		(pts
+			(xy 108.89 50) (xy 118 50)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c79f480d-badf-4b4f-afd9-ca8b1f2682ef")
+	)
+	(wire
+		(pts
+			(xy 108.89 47.46) (xy 118 47.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b749d273-91e4-4152-943a-6bd5a1a6620a")
+	)
+	(wire
+		(pts
+			(xy 108.89 44.92) (xy 118 44.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9b656b0c-0602-4f98-beb7-5014bf8e747f")
+	)
+	(wire
+		(pts
+			(xy 100 35) (xy 100 39.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc68928e-f932-40e7-bd01-14e369025ce9")
+	)
+	(wire
+		(pts
+			(xy 100 60.16) (xy 100 65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e4e716c6-e992-42ea-895f-2e80b6fc2b93")
+	)
+	(wire
+		(pts
+			(xy 192 47.4) (xy 194.76 47.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43dc9265-68e5-42f0-aa48-68c48feeb6fe")
+	)
+	(wire
+		(pts
+			(xy 192 52.4) (xy 194.76 52.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b52d477-43c4-473f-85a2-e9aa05c3f629")
+	)
+	(wire
+		(pts
+			(xy 225.24 52.46) (xy 228 52.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78db4892-cd69-4993-b11d-9872d4958528")
+	)
+	(wire
+		(pts
+			(xy 225.24 55) (xy 228 55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8d9e92f8-89d0-424e-9e7a-00430b23a623")
+	)
+	(wire
+		(pts
+			(xy 210 37) (xy 210 39.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a786ec81-8503-40aa-b122-e0ff420ebc02")
+	)
+	(wire
+		(pts
+			(xy 207.46 70.24) (xy 207 72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c40e30e3-f48f-44e8-a8b1-a63eaebada01")
+	)
+	(wire
+		(pts
+			(xy 212.54 70.24) (xy 213 72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c48ec056-f665-4c9d-a6b2-dbaee715ea02")
+	)
+	(wire
+		(pts
+			(xy 225.24 60.08) (xy 228 60.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea793793-dbc4-4023-9999-459f4d0b8b7f")
+	)
+	(wire
+		(pts
+			(xy 225.24 62.62) (xy 228 62.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "13283887-a1cf-46c7-9f5b-ba6b4287b82b")
+	)
+	(wire
+		(pts
+			(xy 225.24 65.16) (xy 228 65.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89667baa-3007-4ad5-b34a-1c3c604f74f2")
+	)
+	(wire
+		(pts
+			(xy 225.24 67.7) (xy 228 67.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d12132d-6866-4c14-9961-7d52246d1574")
+	)
+	(wire
+		(pts
+			(xy 25 122.46) (xy 28.65 122.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c751143e-f2af-4916-8fb2-9f0e5f11a005")
+	)
+	(wire
+		(pts
+			(xy 25 125) (xy 28.65 125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dbc114c-385e-46ee-b25c-c23a3449494d")
+	)
+	(wire
+		(pts
+			(xy 25 127.54) (xy 28.65 127.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d786190-b3c7-4bbb-8d0c-ec1c2f6fe27d")
+	)
+	(wire
+		(pts
+			(xy 65 122.46) (xy 68.65 122.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a2a99525-5b63-440f-8bc3-ee0f2665ad2f")
+	)
+	(wire
+		(pts
+			(xy 65 125) (xy 68.65 125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4079c14-dff5-438b-80d9-bfd8ce256555")
+	)
+	(wire
+		(pts
+			(xy 65 127.54) (xy 68.65 127.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aadbb38e-467e-4d41-984a-1ef2ac3789a6")
+	)
+	(wire
+		(pts
+			(xy 105 122.46) (xy 108.65 122.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fae06a86-60e5-4c1c-a4bb-82b2dacd9cf5")
+	)
+	(wire
+		(pts
+			(xy 105 125) (xy 108.65 125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "258a3b5b-c8ab-4b5a-a887-f7ca39167719")
+	)
+	(wire
+		(pts
+			(xy 105 127.54) (xy 108.65 127.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e29298bd-8da6-48bf-a248-b57ce6169727")
+	)
+	(wire
+		(pts
+			(xy 145 122.46) (xy 148.65 122.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c436de34-1353-418a-9fdc-7b039da9a572")
+	)
+	(wire
+		(pts
+			(xy 145 125) (xy 148.65 125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c46661b-5a0d-4c0e-8daf-17a793dea008")
+	)
+	(wire
+		(pts
+			(xy 145 127.54) (xy 148.65 127.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c485a18-fe51-4546-adff-932f0c999c6a")
+	)
+	(wire
+		(pts
+			(xy 185 122.46) (xy 188.65 122.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3181538f-de4a-495d-8520-3ba23288ee96")
+	)
+	(wire
+		(pts
+			(xy 185 125) (xy 188.65 125)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b4a62b7-b6e2-48b5-94a5-a5713bc45f69")
+	)
+	(wire
+		(pts
+			(xy 185 127.54) (xy 188.65 127.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c74714c7-cb16-476d-bd22-4f4257c12072")
+	)
+	(global_label "INPUT_NODE"
+		(shape input)
+		(at 45 55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0439cef4-296e-48f6-8a4c-8aab7d34628a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 45 55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT3_A2_D17"
+		(shape input)
+		(at 105 125 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "062b8ca4-b979-499f-873d-abd2054528a7")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 105 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 175 105 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "09d3c4dc-848d-4379-940f-80321a2f95df")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175 105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "D9_SWITCH"
+		(shape input)
+		(at 192 47.4 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "0bd47e21-221d-4d34-9157-9508bfe5c7d6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 192 47.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_CAP_IN"
+		(shape input)
+		(at 155 95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "14641e15-2c8c-431e-819a-e69a46726087")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_JACK_TIP"
+		(shape input)
+		(at 155 105 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "191eaa5e-4747-4c39-8a32-a46a84c2db51")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155 105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VREF_1V65"
+		(shape input)
+		(at 65 55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "19b1fbe8-dbf5-446f-b400-f956586d81ee")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 35 80 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1a928ca8-d876-4143-b2a4-b4fdfa119857")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 35 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 55 90 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1b266b12-6cb5-443e-b97c-e5b8e48e4e7d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 55 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AUDIO_IN_L"
+		(shape input)
+		(at 175 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1cafd09e-18e1-4688-951b-fcff7c23e4ab")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "IN_JACK_TIP"
+		(shape input)
+		(at 45 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "1cfce3f4-e035-43be-8ab9-3eca25c1d41b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 45 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_BUF_INPUT"
+		(shape input)
+		(at 175 75 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "20adec3b-2eab-4469-9486-41ad5661b479")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175 75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 85 100 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "231856f8-4ea3-4613-8b49-5007bdd83d8b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 85 100 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AUDIO_IN_L"
+		(shape input)
+		(at 192 52.4 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "2434dcb2-f59e-4361-bb2f-d4c6bfcbca90")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 192 52.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 85 80 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "33fb8ed3-f88f-433d-8a0f-aebb9dd5c46a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 85 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_BUF_INPUT"
+		(shape input)
+		(at 155 85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "353cd574-9e53-4a21-8752-910b959edf24")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155 85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT2_A1_D16"
+		(shape input)
+		(at 65 125 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "3562857a-6c49-4fd6-a1f2-01c97845352a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 210 37 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "48161e59-b586-405f-bac6-e77c871b6917")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 210 37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_BUF_INPUT"
+		(shape input)
+		(at 118 50 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4a892f72-ad20-4910-aefd-b8a93798cc44")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118 50 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VREF_1V65"
+		(shape input)
+		(at 175 85 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4e2b1821-c7e3-4610-b7e6-bb96e4273def")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175 85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VREF_1V65"
+		(shape input)
+		(at 55 80 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "4f3aa489-c019-464e-90d9-7c4ff47eeec9")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 55 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 85 90 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "57e85fc0-5f47-499a-8ddf-1cdb5f7084db")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 85 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 215 95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "69a768e4-72e2-43c0-af43-c36ca19a5b2b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 215 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_BUF_OUT"
+		(shape input)
+		(at 118 47.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6b3d74f9-e5fe-4795-8f73-238610e35e0c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118 47.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 35 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6bcf8bde-dde7-4063-9a91-aca67ac82202")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 35 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 213 72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "6c8125ac-467b-4226-b624-ee5a11e12d9f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 213 72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "BUF_IN_OUT"
+		(shape input)
+		(at 83 44.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "704736d9-0978-4356-8675-eb0a48d4a7e0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83 44.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 185 25 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "71a77dbc-ffc4-4d29-80cf-e1d2719a109a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 185 25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_LEVEL_IN"
+		(shape input)
+		(at 175 95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "78c38e18-2f72-4e8f-a33f-8694e6253bb3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 175 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VREF_1V65"
+		(shape input)
+		(at 35 90 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7ce8c8f2-137b-4eee-b405-fd76ff330689")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 35 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "INPUT_NODE"
+		(shape input)
+		(at 83 50 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "81b2c1cb-a0ca-4492-bac2-eb07a24d9ed0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83 50 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "IN_JACK_TIP"
+		(shape input)
+		(at 15 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "8c24dc32-c44c-421e-945a-21fc2a4ff784")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 15 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "BUF_IN_OUT"
+		(shape input)
+		(at 83 47.5 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "9c21ce5c-750b-496c-a2c6-d40df569282c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 83 47.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "D9_SWITCH"
+		(shape input)
+		(at 165 25 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a25943c7-8a48-4942-9664-0a51eb87a540")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 165 25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "BUF_TO_DAISY_C"
+		(shape input)
+		(at 155 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a453739d-24d2-4b4d-af0d-8c68139bd137")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AUDIO_OUT_R_UNUSED"
+		(shape input)
+		(at 228 55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "a72988ef-09d2-47ce-b1f4-88229a66b664")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228 55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 207 72 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "aba9d1ba-3c13-4db3-add5-337028cbcd1f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 207 72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_CAP_IN"
+		(shape input)
+		(at 145 95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ac09edff-f9ce-4d49-a252-e94415f041e2")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 145 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT1_A0_D15"
+		(shape input)
+		(at 25 125 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "af36fca7-19c2-477d-a729-3da72eca8a25")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 25 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "POT4_A3_D18"
+		(shape input)
+		(at 145 125 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "afc850f1-1608-442e-a7fd-7c778e943ad6")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 145 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_BUF_OUT"
+		(shape input)
+		(at 118 44.9 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b78898e7-d5de-424b-97d3-90bfa11d754b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 118 44.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AUDIO_OUT_L"
+		(shape input)
+		(at 155 75 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "bd005cb7-e223-43b4-ab44-069fcec446ba")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 155 75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "BUF_TO_DAISY_C"
+		(shape input)
+		(at 145 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c19469e9-4f13-4694-adbe-e643a8d42ff0")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 145 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 100 35 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c94a901b-a584-4210-9514-16c578df114a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 100 35 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "INPUT_NODE"
+		(shape input)
+		(at 65 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d1423f30-da6f-464e-b739-4f4316e7ca22")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_JACK_TIP"
+		(shape input)
+		(at 185 125 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d4c58810-555a-4680-b96f-d9807119f959")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 185 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VREF_1V65"
+		(shape input)
+		(at 65 80 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "d5bd4460-d5c6-4303-bfd6-def5832c8849")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "+3V3A"
+		(shape passive)
+		(at 65 100 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "df0db3af-c0e1-41f4-b7ee-f14132917a09")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 100 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_BUF_OUT"
+		(shape input)
+		(at 125 95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "df8d2581-478d-4e1b-a8cb-540aff1ecd6d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape passive)
+		(at 100 65 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "e65099a6-c795-4a0e-a239-b6f8cd799cf3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 100 65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "VREF_1V65"
+		(shape input)
+		(at 65 90 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ec69cd96-669c-4de0-890e-98770e8442b3")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 65 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "AUDIO_OUT_L"
+		(shape input)
+		(at 228 52.4 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ed0fe534-ebb4-4ff2-a82b-4f7caba5336a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 228 52.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "BUF_IN_OUT"
+		(shape input)
+		(at 125 45 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "fb216691-c679-4200-a3bb-cc2740a98477")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 125 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(global_label "OUT_JACK_TIP"
+		(shape input)
+		(at 195 95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ffbf8c0d-a84e-4d3a-9b49-25ab36722193")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 195 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 165 95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00048ec0-d9ae-48a2-88f5-4b54bdc233b2")
+		(property "Reference" "C7"
+			(at 165 92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF final output coupling"
+			(at 165 98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 165 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165 95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f06f733c-b576-47f8-9223-bb642e2de7e8")
+		)
+		(pin "2"
+			(uuid "1d20ec13-1e17-4067-a077-e07e644925b9")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "C7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:MCP6002_Dual")
+		(at 100 50 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "00e5dd9a-e595-43ea-b582-d10dfc363aca")
+		(property "Reference" "U1"
+			(at 100 47 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MCP6002 dual op-amp"
+			(at 100 53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
+			(at 100 50 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 100 50 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 100 50 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "b5743eb4-6d68-4ff5-8aeb-3a7ba0a9ed8b")
+		)
+		(pin "6"
+			(uuid "f376b0e3-79cf-4ad5-918b-990a9408d5be")
+		)
+		(pin "7"
+			(uuid "6c2177e5-8140-47bf-be95-7616b609d72c")
+		)
+		(pin "5"
+			(uuid "166e1620-9685-425c-b4ea-f545a9cdc60f")
+		)
+		(pin "4"
+			(uuid "e903dd07-0bd6-4baa-9a6b-caef124cd46e")
+		)
+		(pin "8"
+			(uuid "4c1f197a-2437-4076-9410-cc5325ca1b1b")
+		)
+		(pin "2"
+			(uuid "b3dd709c-995d-41c8-8e22-c2270d756794")
+		)
+		(pin "1"
+			(uuid "704ff14d-70e9-4dad-a7fb-386a6a95380e")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 165 85 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "06ccc52d-214e-4ef3-9b88-050122fdbb91")
+		(property "Reference" "R5"
+			(at 165 82 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k output bias"
+			(at 165 88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 165 85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165 85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165 85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3d9249d2-17a4-4ffc-91a3-9b6ebe14d251")
+		)
+		(pin "1"
+			(uuid "c3701159-d703-49a8-ac56-89d141bedd65")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 75 100 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "15d2d106-0680-45b9-9d1e-533af6c682fe")
+		(property "Reference" "C3"
+			(at 75 97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF op-amp decouple"
+			(at 75 103 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 75 100 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 75 100 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 75 100 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "005cc2c8-d373-4d88-82e6-1098faabf9a2")
+		)
+		(pin "1"
+			(uuid "b034ef6d-e79c-4aa4-8049-520216b36bca")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 25 45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2102dacf-d329-4b63-ac45-20bea5b108f4")
+		(property "Reference" "J1"
+			(at 25 42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Input TS jack: tip/sleeve"
+			(at 25 48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Jack_or_Switch_2Pin"
+			(at 25 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 25 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 25 45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "50a6a604-5f65-4b38-98f0-4724504f1207")
+		)
+		(pin "1"
+			(uuid "ee42fa95-586c-459d-87b1-97131bf6bca7")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 75 80 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "23218daf-4072-41bf-b8df-35ac429d8274")
+		(property "Reference" "C1"
+			(at 75 77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10uF VREF bulk"
+			(at 75 83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 75 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 75 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 75 80 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ad85c33f-e1f2-4270-b808-12bdc8714d72")
+		)
+		(pin "1"
+			(uuid "e8994754-d69f-4de7-b7f6-726a27b1e82c")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 135 45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2e4c4021-0da7-4e80-82a9-c51ccc8da72c")
+		(property "Reference" "R4"
+			(at 135 42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100R"
+			(at 135 48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 135 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 135 45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "8603fdcd-214e-47ed-8584-4ae92b98477c")
+		)
+		(pin "1"
+			(uuid "3086f496-6682-4987-8fed-903a7bb4e0d4")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 165 75 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "59870755-d0bc-4594-a653-f4070eb8f5aa")
+		(property "Reference" "C6"
+			(at 165 72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF from Daisy Out"
+			(at 165 78 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 165 75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165 75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165 75 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "23dcf381-6b67-4933-ad46-31f2887c3a88")
+		)
+		(pin "1"
+			(uuid "ede0ead3-d43b-4095-b5e1-5fcbdd760951")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "C6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 75 90 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "61173081-3646-4f8b-95d8-c268fa532d53")
+		(property "Reference" "C2"
+			(at 75 87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100nF VREF bypass"
+			(at 75 93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 75 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 75 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 75 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "78336362-7f24-4b02-8b46-c13d54a98533")
+		)
+		(pin "2"
+			(uuid "bcd0347a-f7d9-4a64-82b9-edcc14f3a586")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 165 45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8f999bac-7592-493b-8598-35bab3a4e42f")
+		(property "Reference" "C5"
+			(at 165 42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF into Daisy"
+			(at 165 48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 165 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165 45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "3e02be74-f6d4-4097-8cf3-53b82af83503")
+		)
+		(pin "1"
+			(uuid "2e49e298-92d9-4b0b-a18b-145f2bb82a38")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 205 95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9d581e4e-8dd3-4b63-bb2b-60f43599c6f9")
+		(property "Reference" "J2"
+			(at 205 92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output TS jack: tip/sleeve"
+			(at 205 98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Jack_or_Switch_2Pin"
+			(at 205 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 205 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 205 95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ea5d912f-4c02-43bd-94cd-b3a57de00507")
+		)
+		(pin "2"
+			(uuid "978d3ef0-c755-4db7-ad00-5c204cda1e0b")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 165 105 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a383c363-9395-405f-aa8e-2d7c8d84c3fd")
+		(property "Reference" "R7"
+			(at 165 102 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k pulldown"
+			(at 165 108 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 165 105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 165 105 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 165 105 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6b718376-4358-4b08-9130-649881f341d3")
+		)
+		(pin "1"
+			(uuid "9b934ba3-91bc-4b16-9d37-b8ff673b08f5")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 55 55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a9dce5f3-6596-41c8-a6d7-1b1dd9215d90")
+		(property "Reference" "R3"
+			(at 55 52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1M to VREF"
+			(at 55 58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 55 55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55 55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55 55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "4f0c7b13-8e1c-4f58-a836-3e1d513898ac")
+		)
+		(pin "2"
+			(uuid "9a0c6b3b-fff9-44b4-b7c3-becb62f633cc")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 55 45 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b1c0b533-71f1-4768-8ec5-dc93b1c3589a")
+		(property "Reference" "C4"
+			(at 55 42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1uF input coupling"
+			(at 55 48 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 55 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 55 45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 55 45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "7a10b8b4-3fdf-4f69-abba-909f0f60a8f0")
+		)
+		(pin "1"
+			(uuid "20cd3e59-4756-4496-adb7-dcd0ad886b22")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Daisy_Seed_Minimal")
+		(at 210 55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b49c365c-1327-467f-9ecc-e52714496657")
+		(property "Reference" "U2"
+			(at 210 52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Daisy Seed minimal pinout"
+			(at 210 58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Daisy_Seed_2x20_Socket"
+			(at 210 55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 210 55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 210 55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "19"
+			(uuid "0bce48f9-0b86-470d-a674-cbbb4d7067ff")
+		)
+		(pin "20"
+			(uuid "8ddcb78c-5dce-41c3-bfca-f3618d6a59f8")
+		)
+		(pin "18"
+			(uuid "b90cd345-6cf7-4031-a9f4-3d389b886a21")
+		)
+		(pin "40"
+			(uuid "0f720de9-216e-4e47-94dd-a41046fee010")
+		)
+		(pin "16"
+			(uuid "be834c91-501a-4b77-9c04-2729b65b8190")
+		)
+		(pin "10"
+			(uuid "20666df1-0352-4ee3-92ca-71e560640294")
+		)
+		(pin "21"
+			(uuid "108a4dea-c866-4269-9572-0b95fd5fd8e1")
+		)
+		(pin "22"
+			(uuid "a5572043-6ad2-4e1b-8cb0-2eca27bfd007")
+		)
+		(pin "23"
+			(uuid "b3cc14f8-6c4f-4811-84d0-cb136c3781dd")
+		)
+		(pin "24"
+			(uuid "067ad9ce-d736-4f3c-8eec-36c9cd21556a")
+		)
+		(pin "25"
+			(uuid "dc5e4ee8-2efc-4e4b-bd50-fa8178a10590")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "U2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 175 25 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b8cb283e-93ea-4f6b-a8a2-b96d063734da")
+		(property "Reference" "SW1"
+			(at 175 22 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Momentary mode switch"
+			(at 175 28 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Jack_or_Switch_2Pin"
+			(at 175 25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 175 25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 175 25 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "ac9e858a-a15c-4c48-a34f-9a63c8aaf693")
+		)
+		(pin "1"
+			(uuid "9caa59d8-e155-4acc-b2ef-265ad8d4fd2e")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Three_Pin_Pot")
+		(at 115 125 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c2991d33-4f21-4a3b-b762-dfe37a3b7823")
+		(property "Reference" "RV3"
+			(at 115 122 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "B10K time/rate"
+			(at 115 128 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Pot_3Pin_B10K_Wired"
+			(at 115 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 115 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 115 125 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "438e6ada-f4ca-470b-954b-799189a77655")
+		)
+		(pin "3"
+			(uuid "8dc57321-a3c3-4664-94d4-e216200f0412")
+		)
+		(pin "2"
+			(uuid "1cec87af-174a-4435-b6f5-8aa9f6f81ded")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "RV3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 135 95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d51ad2fd-ff43-4341-9686-aa01d9b0a162")
+		(property "Reference" "R6"
+			(at 135 92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100R output iso"
+			(at 135 98 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 135 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135 95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 135 95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "6f64443f-e211-45d3-ac78-f15aab68a0bf")
+		)
+		(pin "1"
+			(uuid "e2e267d6-a262-4ecf-9803-5de84d228f90")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Three_Pin_Pot")
+		(at 155 125 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d6069c68-bac8-479a-a60f-5897c5d60c8d")
+		(property "Reference" "RV4"
+			(at 155 122 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "B10K feedback"
+			(at 155 128 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Pot_3Pin_B10K_Wired"
+			(at 155 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 155 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 155 125 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9a2f7e70-d397-4be8-86ad-d406f3b16a00")
+		)
+		(pin "2"
+			(uuid "dd226040-7ce7-4d30-9670-8b83e82aa788")
+		)
+		(pin "3"
+			(uuid "4be70afe-0592-43e5-8ce5-9185812ba4ce")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "RV4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Three_Pin_Pot")
+		(at 195 125 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d8860418-16f7-4791-b6e6-59766e121f1f")
+		(property "Reference" "RV5"
+			(at 195 122 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "B10K output level"
+			(at 195 128 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Pot_3Pin_B10K_Wired"
+			(at 195 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 195 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 195 125 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "f182a55c-3291-4d21-9fd6-e63ce89cf57f")
+		)
+		(pin "2"
+			(uuid "628faf13-49a8-43f3-84ae-077d99d0d336")
+		)
+		(pin "1"
+			(uuid "7cf55b85-73ad-48e8-9c56-9c21eda84eca")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "RV5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 45 90 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d8e01cc6-b395-480a-afde-7a98136b7f41")
+		(property "Reference" "R2"
+			(at 45 87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k VREF bottom"
+			(at 45 93 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 45 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45 90 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45 90 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "d507c40b-6e8b-4119-9a45-098ce98d0709")
+		)
+		(pin "1"
+			(uuid "3e7c72c9-efcb-421a-9e6c-a573645cbd6f")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Two_Pin")
+		(at 45 80 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d9b58bb8-78b2-4e5a-a19e-5c80d4986315")
+		(property "Reference" "R1"
+			(at 45 77 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100k VREF top"
+			(at 45 83 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:TH_2Pin_7p62"
+			(at 45 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45 80 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45 80 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "05c0d4d6-d225-4fe2-bafc-d6f19313826a")
+		)
+		(pin "1"
+			(uuid "84d464a1-233a-450a-a756-fb07a249a20c")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Three_Pin_Pot")
+		(at 35 125 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fc8ff730-8bd1-41bb-a350-a2ab36686801")
+		(property "Reference" "RV1"
+			(at 35 122 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "B10K wet/dry"
+			(at 35 128 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Pot_3Pin_B10K_Wired"
+			(at 35 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 35 125 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "f0055502-a306-47a2-9f28-a97d757e1d3d")
+		)
+		(pin "2"
+			(uuid "01fd8a62-d3f6-4611-ad3a-08efadadd9a2")
+		)
+		(pin "1"
+			(uuid "9ee9725c-b113-464b-a681-e7f46fee71ba")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "RV1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Custom:Three_Pin_Pot")
+		(at 75 125 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ff5d4d64-d240-4c42-a278-68959e1806e4")
+		(property "Reference" "RV2"
+			(at 75 122 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "B10K amount"
+			(at 75 128 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom:Pot_3Pin_B10K_Wired"
+			(at 75 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 75 125 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 75 125 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "3"
+			(uuid "53267f61-bba7-4681-9f04-0567f16f8597")
+		)
+		(pin "1"
+			(uuid "8b1cca34-b4e8-47bf-a6d0-2648610557a9")
+		)
+		(pin "2"
+			(uuid "c34c10c7-7ded-4841-b339-c2ea942e72c8")
+		)
+		(instances
+			(project "Daisy_MultiEffect_Pedal"
+				(path "/3205d63a-e4c8-497b-8331-e18f49137103"
+					(reference "RV2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
 )

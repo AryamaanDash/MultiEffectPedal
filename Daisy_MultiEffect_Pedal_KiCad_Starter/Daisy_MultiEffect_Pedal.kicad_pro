@@ -632,13 +632,18 @@
       {
         "filename": "Daisy_MultiEffect_Pedal.kicad_sch",
         "name": "Daisy_MultiEffect_Pedal",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "3205d63a-e4c8-497b-8331-e18f49137103"
       }
     ],
     "used_designators": "",
     "variants": []
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "3205d63a-e4c8-497b-8331-e18f49137103",
+      "Daisy_MultiEffect_Pedal"
+    ]
+  ],
   "text_variables": {},
   "tuning_profiles": {
     "meta": {
