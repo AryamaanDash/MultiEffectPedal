@@ -1,0 +1,141 @@
+** Drc report for Daisy_MultiEffect_Pedal.kicad_pcb **
+** Created on 2026-08-15T18:59:04 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 37 DRC violations **
+[via_dangling]: Via is not connected or connected on only one layer
+    Local override; warning
+    @(66.0000 mm, 64.0000 mm): Via [OUT_BUF_INPUT] on F.Cu - B.Cu
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(70.0000 mm, 29.0000 mm): Footprint C2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(105.0000 mm, 86.0000 mm): Footprint RV5
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(118.0000 mm, 78.0000 mm): Footprint R7
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(140.0000 mm, 86.0000 mm): Footprint J2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(61.0000 mm, 15.0000 mm): Footprint RV3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(70.0000 mm, 35.0000 mm): Footprint C3
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(70.0000 mm, 24.0000 mm): Footprint C1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(101.0000 mm, 73.0000 mm): Footprint C7
+[lib_footprint_mismatch]: Footprint 'DIP-8_W7.62mm' does not match copy in library 'Package_DIP'
+    Local override; warning
+    @(66.0000 mm, 48.0000 mm): Footprint U1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(25.0000 mm, 15.0000 mm): Footprint RV1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(106.0000 mm, 34.0000 mm): Footprint SW1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(84.0000 mm, 73.0000 mm): Footprint R6
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(34.0000 mm, 38.0000 mm): Footprint C4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(118.0000 mm, 24.0000 mm): Footprint U2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(86.0000 mm, 64.0000 mm): Footprint R5
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(55.0000 mm, 24.0000 mm): Footprint R1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(98.0000 mm, 64.0000 mm): Footprint C6
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(43.0000 mm, 15.0000 mm): Footprint RV2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(55.0000 mm, 29.0000 mm): Footprint R2
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(96.0000 mm, 40.0000 mm): Footprint C5
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(79.0000 mm, 15.0000 mm): Footprint RV4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(15.0000 mm, 38.0000 mm): Footprint J1
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(82.0000 mm, 40.0000 mm): Footprint R4
+[lib_footprint_issues]: The current configuration does not include the footprint library 'Custom'
+    Local override; warning
+    @(49.0000 mm, 43.0000 mm): Footprint R3
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(83.0000 mm, 84.0000 mm): PCB text 'RV5 = wired output volume. RV1-RV4 are optional ADC headers not used by current firmware.' on F.Silkscreen
+    @(98.0000 mm, 83.4600 mm): Reference field of R3
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(101.0000 mm, 89.0000 mm): Segment of RV5 on F.Silkscreen
+    @(83.0000 mm, 84.0000 mm): PCB text 'RV5 = wired output volume. RV1-RV4 are optional ADC headers not used by current firmware.' on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(109.0000 mm, 89.0000 mm): Segment of RV5 on F.Silkscreen
+    @(98.0000 mm, 88.5400 mm): Value field of R3 (1M input bias)
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(140.0000 mm, 60.5400 mm): Value field of C2 (100nF VREF)
+    @(138.7800 mm, 21.0000 mm): Segment of U2 on F.Silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(138.7800 mm, 21.0000 mm): Segment of U2 on F.Silkscreen
+    @(140.0000 mm, 72.5400 mm): Value field of C3 (100nF MCP6002 decouple)
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(115.0000 mm, 75.3000 mm): Segment of U2 on F.Silkscreen
+    @(110.0000 mm, 60.5400 mm): Value field of R2 (100k VREF bottom)
+[silk_overlap]: Silkscreen clearance
+    Rule: board setup constraints silk; warning
+    @(110.0000 mm, 50.5400 mm): Value field of R1 (100k VREF top)
+    @(115.0000 mm, 75.3000 mm): Segment of U2 on F.Silkscreen
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(80.0000 mm, 87.0000 mm): PCB text 'USB power only for prototype. Do not feed 9V into 3V3/ADC pins.' on F.Silkscreen
+    @(102.4600 mm, 86.0000 mm): PTH pad 1 [GND] of RV5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(80.0000 mm, 87.0000 mm): PCB text 'USB power only for prototype. Do not feed 9V into 3V3/ADC pins.' on F.Silkscreen
+    @(105.0000 mm, 86.0000 mm): PTH pad 2 [OUT_JACK_TIP] of RV5
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(140.0000 mm, 72.5400 mm): Value field of C3 (100nF MCP6002 decouple)
+    @(135.7800 mm, 72.2600 mm): PTH pad 40 [GND] of U2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(140.0000 mm, 60.5400 mm): Value field of C2 (100nF VREF)
+    @(135.7800 mm, 59.5600 mm): PTH pad 35 [<no net>] of U2
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(140.0000 mm, 50.5400 mm): Value field of C1 (10uF VREF)
+    @(135.7800 mm, 49.4000 mm): PTH pad 31 [<no net>] of U2
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
