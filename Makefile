@@ -2,7 +2,18 @@
 TARGET = MultiEffectPedal
 
 # Sources
-CPP_SOURCES = MultiEffectPedal.cpp
+CPP_SOURCES = \
+	src/main.cpp \
+	src/AudioEngine.cpp \
+	src/EffectManager.cpp \
+	src/PedalControls.cpp \
+	src/effects/BypassEffect.cpp \
+	src/effects/DelayEffect.cpp \
+	src/effects/DistortionEffect.cpp \
+	src/effects/FlangerEffect.cpp \
+	src/effects/ReverbEffect.cpp
+
+C_INCLUDES += -Iinclude
 
 USE_DAISYSP_LGPL = 1
 
